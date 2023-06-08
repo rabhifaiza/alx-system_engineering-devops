@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo hoami
+sudo whoami
