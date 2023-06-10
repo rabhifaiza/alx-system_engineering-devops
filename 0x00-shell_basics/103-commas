@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -dap1 . | awk '{ printf "%s, ", $0 } END { printf "\n" }'
+shopt -s nullglob; for entry in * .[^.]*; do echo -n "$entry"; if [ -d "$entry" ]; then echo -n "/"; fi; echo -n ", "; done; echo
