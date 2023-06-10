@@ -1,2 +1,2 @@
 #!/bin/bash
-(printf "./, ../, "; find . -maxdepth 1 -type d ! -name "." ! -name ".." | sort -d; find . -maxdepth 1 ! -type d ! -name "." | sort -d) | sed -z 's/\n/, /g' | sed 's/, $/\n/'
+(echo "./, ../, $(ls -dap1 . | grep -v '^\.\/\.$' | grep -v '^\.\/\.\.$' | sort -df)"; echo "")
