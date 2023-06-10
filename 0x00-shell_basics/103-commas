@@ -1,2 +1,2 @@
 #!/bin/bash
-(echo "./, ../, $(ls -dap1 . | grep -v '^\.\/\.$' | grep -v '^\.\/\.\.$' | sort -df)"; echo "")
+ls -dap1 . | awk '{ printf "%s, ", $0 } END { printf "\n" }'
