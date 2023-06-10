@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ap1 | sort -d -k1.2 | awk '{ printf "%s, ", $0 } END { printf "\n" }' | sed 's/^\.\///' 
+(printf "./, ../, "; find . -maxdepth 1 -type d ! -name "." ! -name ".." | sort -d; find . -maxdepth 1 ! -type d ! -name "." | sort -d) | sed -z 's/\n/, /g' | sed 's/, $/\n/'
