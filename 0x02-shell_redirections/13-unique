@@ -1,2 +1,2 @@
 #!/bin/bash
-cat list | awk 'NR==FNR { count[$0]++; next } count[$0] == 1 { print }' | sort
+sort | uniq -u | awk '{print}'
