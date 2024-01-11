@@ -1,1 +1,1 @@
-this is project for alias bash
+this is a description about 0x03-shell_variables_expansions

@@ -1,2 +1,2 @@
 #!/bin/bash
-stat -c %U hello | awk '{if ($0 == "guillaume") system("sudo chown betty hello")}'
+chown --from=guillaume betty hello
